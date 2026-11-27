@@ -11,8 +11,6 @@
 - Segmented customers into 6 groups (Champions, Loyal Customers, Potential Loyalists, At Risk, New Customers, Hibernating) that power the dashboard's RFM analysis.
 - Built `dim_customer` with a surrogate key and deduplicated location attributes, and wrote it to HDFS as Parquet for the star schema.
 
-**Known limitation and planned fix:** about 97% of Olist customers placed only one order, so `NTILE(5)` splits customers with the same frequency into different scores. A more accurate approach uses fixed frequency thresholds (1, 2, 3+ orders) instead of quintiles.
-
 ---
 
 # SIC-Ecomm-Dimensional-Modeling
